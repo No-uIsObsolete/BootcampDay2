@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "Day2_backend": {
+      "candid": "src/Day2_backend/Day2_backend.did",
+      "package": "Day2_backend",
+      "type": "rust"
+    },
+    "Day2_frontend": {
+      "dependencies": [
+        "Day2_backend"
+      ],
+      "source": [
+        "src/Day2_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "Day2_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
