@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue"
-import { dzien2_backend } from "declarations/dzien2_backend/index"
+import { Day2_backend } from "declarations/Day2_backend/index"
 let greeting = ref("")
 
 async function handleSubmit(e) {
@@ -8,7 +8,7 @@ async function handleSubmit(e) {
     const target = e.target
     const name = target.querySelector("#name").value
     const numer = target.querySelector("#numer").value
-    await dzien2_backend.greet(name, Number(numer)).then((response) => {
+    await Day2_backend.greet(name, Number(numer)).then((response) => {
         greeting.value = response
     })
 }
